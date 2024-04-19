@@ -20,36 +20,36 @@ NormalBridgeDto _$NormalBridgeDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$NormalBridgeDto {
-  int get id => throw _privateConstructorUsedError;
-  String get nonBridge => throw _privateConstructorUsedError;
-  String? get bridgeId => throw _privateConstructorUsedError;
-  String get bridgeName => throw _privateConstructorUsedError;
-  String get bridgeNameEng => throw _privateConstructorUsedError;
+  int get ID => throw _privateConstructorUsedError;
+  String get non_bridge => throw _privateConstructorUsedError;
+  String? get bridge_id => throw _privateConstructorUsedError;
+  String get bridge_name => throw _privateConstructorUsedError;
+  String get bridge_name_eng => throw _privateConstructorUsedError;
   String get adm => throw _privateConstructorUsedError;
   String get section => throw _privateConstructorUsedError;
-  int get countyCode => throw _privateConstructorUsedError;
-  int get areaCode => throw _privateConstructorUsedError;
+  int get CountyCode => throw _privateConstructorUsedError;
+  int get AreaCode => throw _privateConstructorUsedError;
   String get route => throw _privateConstructorUsedError;
-  String get riverCross => throw _privateConstructorUsedError;
-  String get doubleBridge => throw _privateConstructorUsedError;
+  String get river_cross => throw _privateConstructorUsedError;
+  String get double_bridge => throw _privateConstructorUsedError;
   String get designer => throw _privateConstructorUsedError;
   String get engineer => throw _privateConstructorUsedError;
   String get builder => throw _privateConstructorUsedError;
-  int get inspectRate => throw _privateConstructorUsedError;
+  int get inspect_rate => throw _privateConstructorUsedError;
   String get locational => throw _privateConstructorUsedError;
   String get structure => throw _privateConstructorUsedError;
-  double get totalLength => throw _privateConstructorUsedError;
+  double get total_length => throw _privateConstructorUsedError;
   double get area => throw _privateConstructorUsedError;
   int get spans => throw _privateConstructorUsedError;
-  double get widthMax => throw _privateConstructorUsedError;
-  double get widthMin => throw _privateConstructorUsedError;
+  double get width_max => throw _privateConstructorUsedError;
+  double get width_min => throw _privateConstructorUsedError;
   int get driveways => throw _privateConstructorUsedError;
-  double get longitudeStart => throw _privateConstructorUsedError;
-  double get latitudeStart => throw _privateConstructorUsedError;
-  double get longitudeEnd => throw _privateConstructorUsedError;
-  double get latitudeEnd => throw _privateConstructorUsedError;
-  double get objLongitude => throw _privateConstructorUsedError;
-  double get objLatitude => throw _privateConstructorUsedError;
+  double get Longitude_start => throw _privateConstructorUsedError;
+  double get Latitude_start => throw _privateConstructorUsedError;
+  double get Longitude_end => throw _privateConstructorUsedError;
+  double get Latitude_end => throw _privateConstructorUsedError;
+  double get Obj_Longitude => throw _privateConstructorUsedError;
+  double get Obj_Latitude => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -64,36 +64,36 @@ abstract class $NormalBridgeDtoCopyWith<$Res> {
       _$NormalBridgeDtoCopyWithImpl<$Res, NormalBridgeDto>;
   @useResult
   $Res call(
-      {int id,
-      String nonBridge,
-      String? bridgeId,
-      String bridgeName,
-      String bridgeNameEng,
+      {int ID,
+      String non_bridge,
+      String? bridge_id,
+      String bridge_name,
+      String bridge_name_eng,
       String adm,
       String section,
-      int countyCode,
-      int areaCode,
+      int CountyCode,
+      int AreaCode,
       String route,
-      String riverCross,
-      String doubleBridge,
+      String river_cross,
+      String double_bridge,
       String designer,
       String engineer,
       String builder,
-      int inspectRate,
+      int inspect_rate,
       String locational,
       String structure,
-      double totalLength,
+      double total_length,
       double area,
       int spans,
-      double widthMax,
-      double widthMin,
+      double width_max,
+      double width_min,
       int driveways,
-      double longitudeStart,
-      double latitudeStart,
-      double longitudeEnd,
-      double latitudeEnd,
-      double objLongitude,
-      double objLatitude});
+      double Longitude_start,
+      double Latitude_start,
+      double Longitude_end,
+      double Latitude_end,
+      double Obj_Longitude,
+      double Obj_Latitude});
 }
 
 /// @nodoc
@@ -109,57 +109,57 @@ class _$NormalBridgeDtoCopyWithImpl<$Res, $Val extends NormalBridgeDto>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? nonBridge = null,
-    Object? bridgeId = freezed,
-    Object? bridgeName = null,
-    Object? bridgeNameEng = null,
+    Object? ID = null,
+    Object? non_bridge = null,
+    Object? bridge_id = freezed,
+    Object? bridge_name = null,
+    Object? bridge_name_eng = null,
     Object? adm = null,
     Object? section = null,
-    Object? countyCode = null,
-    Object? areaCode = null,
+    Object? CountyCode = null,
+    Object? AreaCode = null,
     Object? route = null,
-    Object? riverCross = null,
-    Object? doubleBridge = null,
+    Object? river_cross = null,
+    Object? double_bridge = null,
     Object? designer = null,
     Object? engineer = null,
     Object? builder = null,
-    Object? inspectRate = null,
+    Object? inspect_rate = null,
     Object? locational = null,
     Object? structure = null,
-    Object? totalLength = null,
+    Object? total_length = null,
     Object? area = null,
     Object? spans = null,
-    Object? widthMax = null,
-    Object? widthMin = null,
+    Object? width_max = null,
+    Object? width_min = null,
     Object? driveways = null,
-    Object? longitudeStart = null,
-    Object? latitudeStart = null,
-    Object? longitudeEnd = null,
-    Object? latitudeEnd = null,
-    Object? objLongitude = null,
-    Object? objLatitude = null,
+    Object? Longitude_start = null,
+    Object? Latitude_start = null,
+    Object? Longitude_end = null,
+    Object? Latitude_end = null,
+    Object? Obj_Longitude = null,
+    Object? Obj_Latitude = null,
   }) {
     return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      ID: null == ID
+          ? _value.ID
+          : ID // ignore: cast_nullable_to_non_nullable
               as int,
-      nonBridge: null == nonBridge
-          ? _value.nonBridge
-          : nonBridge // ignore: cast_nullable_to_non_nullable
+      non_bridge: null == non_bridge
+          ? _value.non_bridge
+          : non_bridge // ignore: cast_nullable_to_non_nullable
               as String,
-      bridgeId: freezed == bridgeId
-          ? _value.bridgeId
-          : bridgeId // ignore: cast_nullable_to_non_nullable
+      bridge_id: freezed == bridge_id
+          ? _value.bridge_id
+          : bridge_id // ignore: cast_nullable_to_non_nullable
               as String?,
-      bridgeName: null == bridgeName
-          ? _value.bridgeName
-          : bridgeName // ignore: cast_nullable_to_non_nullable
+      bridge_name: null == bridge_name
+          ? _value.bridge_name
+          : bridge_name // ignore: cast_nullable_to_non_nullable
               as String,
-      bridgeNameEng: null == bridgeNameEng
-          ? _value.bridgeNameEng
-          : bridgeNameEng // ignore: cast_nullable_to_non_nullable
+      bridge_name_eng: null == bridge_name_eng
+          ? _value.bridge_name_eng
+          : bridge_name_eng // ignore: cast_nullable_to_non_nullable
               as String,
       adm: null == adm
           ? _value.adm
@@ -169,25 +169,25 @@ class _$NormalBridgeDtoCopyWithImpl<$Res, $Val extends NormalBridgeDto>
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as String,
-      countyCode: null == countyCode
-          ? _value.countyCode
-          : countyCode // ignore: cast_nullable_to_non_nullable
+      CountyCode: null == CountyCode
+          ? _value.CountyCode
+          : CountyCode // ignore: cast_nullable_to_non_nullable
               as int,
-      areaCode: null == areaCode
-          ? _value.areaCode
-          : areaCode // ignore: cast_nullable_to_non_nullable
+      AreaCode: null == AreaCode
+          ? _value.AreaCode
+          : AreaCode // ignore: cast_nullable_to_non_nullable
               as int,
       route: null == route
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String,
-      riverCross: null == riverCross
-          ? _value.riverCross
-          : riverCross // ignore: cast_nullable_to_non_nullable
+      river_cross: null == river_cross
+          ? _value.river_cross
+          : river_cross // ignore: cast_nullable_to_non_nullable
               as String,
-      doubleBridge: null == doubleBridge
-          ? _value.doubleBridge
-          : doubleBridge // ignore: cast_nullable_to_non_nullable
+      double_bridge: null == double_bridge
+          ? _value.double_bridge
+          : double_bridge // ignore: cast_nullable_to_non_nullable
               as String,
       designer: null == designer
           ? _value.designer
@@ -201,9 +201,9 @@ class _$NormalBridgeDtoCopyWithImpl<$Res, $Val extends NormalBridgeDto>
           ? _value.builder
           : builder // ignore: cast_nullable_to_non_nullable
               as String,
-      inspectRate: null == inspectRate
-          ? _value.inspectRate
-          : inspectRate // ignore: cast_nullable_to_non_nullable
+      inspect_rate: null == inspect_rate
+          ? _value.inspect_rate
+          : inspect_rate // ignore: cast_nullable_to_non_nullable
               as int,
       locational: null == locational
           ? _value.locational
@@ -213,9 +213,9 @@ class _$NormalBridgeDtoCopyWithImpl<$Res, $Val extends NormalBridgeDto>
           ? _value.structure
           : structure // ignore: cast_nullable_to_non_nullable
               as String,
-      totalLength: null == totalLength
-          ? _value.totalLength
-          : totalLength // ignore: cast_nullable_to_non_nullable
+      total_length: null == total_length
+          ? _value.total_length
+          : total_length // ignore: cast_nullable_to_non_nullable
               as double,
       area: null == area
           ? _value.area
@@ -225,41 +225,41 @@ class _$NormalBridgeDtoCopyWithImpl<$Res, $Val extends NormalBridgeDto>
           ? _value.spans
           : spans // ignore: cast_nullable_to_non_nullable
               as int,
-      widthMax: null == widthMax
-          ? _value.widthMax
-          : widthMax // ignore: cast_nullable_to_non_nullable
+      width_max: null == width_max
+          ? _value.width_max
+          : width_max // ignore: cast_nullable_to_non_nullable
               as double,
-      widthMin: null == widthMin
-          ? _value.widthMin
-          : widthMin // ignore: cast_nullable_to_non_nullable
+      width_min: null == width_min
+          ? _value.width_min
+          : width_min // ignore: cast_nullable_to_non_nullable
               as double,
       driveways: null == driveways
           ? _value.driveways
           : driveways // ignore: cast_nullable_to_non_nullable
               as int,
-      longitudeStart: null == longitudeStart
-          ? _value.longitudeStart
-          : longitudeStart // ignore: cast_nullable_to_non_nullable
+      Longitude_start: null == Longitude_start
+          ? _value.Longitude_start
+          : Longitude_start // ignore: cast_nullable_to_non_nullable
               as double,
-      latitudeStart: null == latitudeStart
-          ? _value.latitudeStart
-          : latitudeStart // ignore: cast_nullable_to_non_nullable
+      Latitude_start: null == Latitude_start
+          ? _value.Latitude_start
+          : Latitude_start // ignore: cast_nullable_to_non_nullable
               as double,
-      longitudeEnd: null == longitudeEnd
-          ? _value.longitudeEnd
-          : longitudeEnd // ignore: cast_nullable_to_non_nullable
+      Longitude_end: null == Longitude_end
+          ? _value.Longitude_end
+          : Longitude_end // ignore: cast_nullable_to_non_nullable
               as double,
-      latitudeEnd: null == latitudeEnd
-          ? _value.latitudeEnd
-          : latitudeEnd // ignore: cast_nullable_to_non_nullable
+      Latitude_end: null == Latitude_end
+          ? _value.Latitude_end
+          : Latitude_end // ignore: cast_nullable_to_non_nullable
               as double,
-      objLongitude: null == objLongitude
-          ? _value.objLongitude
-          : objLongitude // ignore: cast_nullable_to_non_nullable
+      Obj_Longitude: null == Obj_Longitude
+          ? _value.Obj_Longitude
+          : Obj_Longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      objLatitude: null == objLatitude
-          ? _value.objLatitude
-          : objLatitude // ignore: cast_nullable_to_non_nullable
+      Obj_Latitude: null == Obj_Latitude
+          ? _value.Obj_Latitude
+          : Obj_Latitude // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -275,36 +275,36 @@ abstract class _$$NormalNormalBridgeDtoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int id,
-      String nonBridge,
-      String? bridgeId,
-      String bridgeName,
-      String bridgeNameEng,
+      {int ID,
+      String non_bridge,
+      String? bridge_id,
+      String bridge_name,
+      String bridge_name_eng,
       String adm,
       String section,
-      int countyCode,
-      int areaCode,
+      int CountyCode,
+      int AreaCode,
       String route,
-      String riverCross,
-      String doubleBridge,
+      String river_cross,
+      String double_bridge,
       String designer,
       String engineer,
       String builder,
-      int inspectRate,
+      int inspect_rate,
       String locational,
       String structure,
-      double totalLength,
+      double total_length,
       double area,
       int spans,
-      double widthMax,
-      double widthMin,
+      double width_max,
+      double width_min,
       int driveways,
-      double longitudeStart,
-      double latitudeStart,
-      double longitudeEnd,
-      double latitudeEnd,
-      double objLongitude,
-      double objLatitude});
+      double Longitude_start,
+      double Latitude_start,
+      double Longitude_end,
+      double Latitude_end,
+      double Obj_Longitude,
+      double Obj_Latitude});
 }
 
 /// @nodoc
@@ -318,57 +318,57 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = null,
-    Object? nonBridge = null,
-    Object? bridgeId = freezed,
-    Object? bridgeName = null,
-    Object? bridgeNameEng = null,
+    Object? ID = null,
+    Object? non_bridge = null,
+    Object? bridge_id = freezed,
+    Object? bridge_name = null,
+    Object? bridge_name_eng = null,
     Object? adm = null,
     Object? section = null,
-    Object? countyCode = null,
-    Object? areaCode = null,
+    Object? CountyCode = null,
+    Object? AreaCode = null,
     Object? route = null,
-    Object? riverCross = null,
-    Object? doubleBridge = null,
+    Object? river_cross = null,
+    Object? double_bridge = null,
     Object? designer = null,
     Object? engineer = null,
     Object? builder = null,
-    Object? inspectRate = null,
+    Object? inspect_rate = null,
     Object? locational = null,
     Object? structure = null,
-    Object? totalLength = null,
+    Object? total_length = null,
     Object? area = null,
     Object? spans = null,
-    Object? widthMax = null,
-    Object? widthMin = null,
+    Object? width_max = null,
+    Object? width_min = null,
     Object? driveways = null,
-    Object? longitudeStart = null,
-    Object? latitudeStart = null,
-    Object? longitudeEnd = null,
-    Object? latitudeEnd = null,
-    Object? objLongitude = null,
-    Object? objLatitude = null,
+    Object? Longitude_start = null,
+    Object? Latitude_start = null,
+    Object? Longitude_end = null,
+    Object? Latitude_end = null,
+    Object? Obj_Longitude = null,
+    Object? Obj_Latitude = null,
   }) {
     return _then(_$NormalNormalBridgeDtoImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      ID: null == ID
+          ? _value.ID
+          : ID // ignore: cast_nullable_to_non_nullable
               as int,
-      nonBridge: null == nonBridge
-          ? _value.nonBridge
-          : nonBridge // ignore: cast_nullable_to_non_nullable
+      non_bridge: null == non_bridge
+          ? _value.non_bridge
+          : non_bridge // ignore: cast_nullable_to_non_nullable
               as String,
-      bridgeId: freezed == bridgeId
-          ? _value.bridgeId
-          : bridgeId // ignore: cast_nullable_to_non_nullable
+      bridge_id: freezed == bridge_id
+          ? _value.bridge_id
+          : bridge_id // ignore: cast_nullable_to_non_nullable
               as String?,
-      bridgeName: null == bridgeName
-          ? _value.bridgeName
-          : bridgeName // ignore: cast_nullable_to_non_nullable
+      bridge_name: null == bridge_name
+          ? _value.bridge_name
+          : bridge_name // ignore: cast_nullable_to_non_nullable
               as String,
-      bridgeNameEng: null == bridgeNameEng
-          ? _value.bridgeNameEng
-          : bridgeNameEng // ignore: cast_nullable_to_non_nullable
+      bridge_name_eng: null == bridge_name_eng
+          ? _value.bridge_name_eng
+          : bridge_name_eng // ignore: cast_nullable_to_non_nullable
               as String,
       adm: null == adm
           ? _value.adm
@@ -378,25 +378,25 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
           ? _value.section
           : section // ignore: cast_nullable_to_non_nullable
               as String,
-      countyCode: null == countyCode
-          ? _value.countyCode
-          : countyCode // ignore: cast_nullable_to_non_nullable
+      CountyCode: null == CountyCode
+          ? _value.CountyCode
+          : CountyCode // ignore: cast_nullable_to_non_nullable
               as int,
-      areaCode: null == areaCode
-          ? _value.areaCode
-          : areaCode // ignore: cast_nullable_to_non_nullable
+      AreaCode: null == AreaCode
+          ? _value.AreaCode
+          : AreaCode // ignore: cast_nullable_to_non_nullable
               as int,
       route: null == route
           ? _value.route
           : route // ignore: cast_nullable_to_non_nullable
               as String,
-      riverCross: null == riverCross
-          ? _value.riverCross
-          : riverCross // ignore: cast_nullable_to_non_nullable
+      river_cross: null == river_cross
+          ? _value.river_cross
+          : river_cross // ignore: cast_nullable_to_non_nullable
               as String,
-      doubleBridge: null == doubleBridge
-          ? _value.doubleBridge
-          : doubleBridge // ignore: cast_nullable_to_non_nullable
+      double_bridge: null == double_bridge
+          ? _value.double_bridge
+          : double_bridge // ignore: cast_nullable_to_non_nullable
               as String,
       designer: null == designer
           ? _value.designer
@@ -410,9 +410,9 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
           ? _value.builder
           : builder // ignore: cast_nullable_to_non_nullable
               as String,
-      inspectRate: null == inspectRate
-          ? _value.inspectRate
-          : inspectRate // ignore: cast_nullable_to_non_nullable
+      inspect_rate: null == inspect_rate
+          ? _value.inspect_rate
+          : inspect_rate // ignore: cast_nullable_to_non_nullable
               as int,
       locational: null == locational
           ? _value.locational
@@ -422,9 +422,9 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
           ? _value.structure
           : structure // ignore: cast_nullable_to_non_nullable
               as String,
-      totalLength: null == totalLength
-          ? _value.totalLength
-          : totalLength // ignore: cast_nullable_to_non_nullable
+      total_length: null == total_length
+          ? _value.total_length
+          : total_length // ignore: cast_nullable_to_non_nullable
               as double,
       area: null == area
           ? _value.area
@@ -434,41 +434,41 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
           ? _value.spans
           : spans // ignore: cast_nullable_to_non_nullable
               as int,
-      widthMax: null == widthMax
-          ? _value.widthMax
-          : widthMax // ignore: cast_nullable_to_non_nullable
+      width_max: null == width_max
+          ? _value.width_max
+          : width_max // ignore: cast_nullable_to_non_nullable
               as double,
-      widthMin: null == widthMin
-          ? _value.widthMin
-          : widthMin // ignore: cast_nullable_to_non_nullable
+      width_min: null == width_min
+          ? _value.width_min
+          : width_min // ignore: cast_nullable_to_non_nullable
               as double,
       driveways: null == driveways
           ? _value.driveways
           : driveways // ignore: cast_nullable_to_non_nullable
               as int,
-      longitudeStart: null == longitudeStart
-          ? _value.longitudeStart
-          : longitudeStart // ignore: cast_nullable_to_non_nullable
+      Longitude_start: null == Longitude_start
+          ? _value.Longitude_start
+          : Longitude_start // ignore: cast_nullable_to_non_nullable
               as double,
-      latitudeStart: null == latitudeStart
-          ? _value.latitudeStart
-          : latitudeStart // ignore: cast_nullable_to_non_nullable
+      Latitude_start: null == Latitude_start
+          ? _value.Latitude_start
+          : Latitude_start // ignore: cast_nullable_to_non_nullable
               as double,
-      longitudeEnd: null == longitudeEnd
-          ? _value.longitudeEnd
-          : longitudeEnd // ignore: cast_nullable_to_non_nullable
+      Longitude_end: null == Longitude_end
+          ? _value.Longitude_end
+          : Longitude_end // ignore: cast_nullable_to_non_nullable
               as double,
-      latitudeEnd: null == latitudeEnd
-          ? _value.latitudeEnd
-          : latitudeEnd // ignore: cast_nullable_to_non_nullable
+      Latitude_end: null == Latitude_end
+          ? _value.Latitude_end
+          : Latitude_end // ignore: cast_nullable_to_non_nullable
               as double,
-      objLongitude: null == objLongitude
-          ? _value.objLongitude
-          : objLongitude // ignore: cast_nullable_to_non_nullable
+      Obj_Longitude: null == Obj_Longitude
+          ? _value.Obj_Longitude
+          : Obj_Longitude // ignore: cast_nullable_to_non_nullable
               as double,
-      objLatitude: null == objLatitude
-          ? _value.objLatitude
-          : objLatitude // ignore: cast_nullable_to_non_nullable
+      Obj_Latitude: null == Obj_Latitude
+          ? _value.Obj_Latitude
+          : Obj_Latitude // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -478,65 +478,65 @@ class __$$NormalNormalBridgeDtoImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$NormalNormalBridgeDtoImpl extends _NormalNormalBridgeDto {
   const _$NormalNormalBridgeDtoImpl(
-      {required this.id,
-      required this.nonBridge,
-      this.bridgeId,
-      required this.bridgeName,
-      required this.bridgeNameEng,
+      {required this.ID,
+      required this.non_bridge,
+      this.bridge_id,
+      required this.bridge_name,
+      required this.bridge_name_eng,
       required this.adm,
       required this.section,
-      required this.countyCode,
-      required this.areaCode,
+      required this.CountyCode,
+      required this.AreaCode,
       required this.route,
-      required this.riverCross,
-      required this.doubleBridge,
+      required this.river_cross,
+      required this.double_bridge,
       required this.designer,
       required this.engineer,
       required this.builder,
-      required this.inspectRate,
+      required this.inspect_rate,
       required this.locational,
       required this.structure,
-      required this.totalLength,
+      required this.total_length,
       required this.area,
       required this.spans,
-      required this.widthMax,
-      required this.widthMin,
+      required this.width_max,
+      required this.width_min,
       required this.driveways,
-      required this.longitudeStart,
-      required this.latitudeStart,
-      required this.longitudeEnd,
-      required this.latitudeEnd,
-      required this.objLongitude,
-      required this.objLatitude})
+      required this.Longitude_start,
+      required this.Latitude_start,
+      required this.Longitude_end,
+      required this.Latitude_end,
+      required this.Obj_Longitude,
+      required this.Obj_Latitude})
       : super._();
 
   factory _$NormalNormalBridgeDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$NormalNormalBridgeDtoImplFromJson(json);
 
   @override
-  final int id;
+  final int ID;
   @override
-  final String nonBridge;
+  final String non_bridge;
   @override
-  final String? bridgeId;
+  final String? bridge_id;
   @override
-  final String bridgeName;
+  final String bridge_name;
   @override
-  final String bridgeNameEng;
+  final String bridge_name_eng;
   @override
   final String adm;
   @override
   final String section;
   @override
-  final int countyCode;
+  final int CountyCode;
   @override
-  final int areaCode;
+  final int AreaCode;
   @override
   final String route;
   @override
-  final String riverCross;
+  final String river_cross;
   @override
-  final String doubleBridge;
+  final String double_bridge;
   @override
   final String designer;
   @override
@@ -544,39 +544,39 @@ class _$NormalNormalBridgeDtoImpl extends _NormalNormalBridgeDto {
   @override
   final String builder;
   @override
-  final int inspectRate;
+  final int inspect_rate;
   @override
   final String locational;
   @override
   final String structure;
   @override
-  final double totalLength;
+  final double total_length;
   @override
   final double area;
   @override
   final int spans;
   @override
-  final double widthMax;
+  final double width_max;
   @override
-  final double widthMin;
+  final double width_min;
   @override
   final int driveways;
   @override
-  final double longitudeStart;
+  final double Longitude_start;
   @override
-  final double latitudeStart;
+  final double Latitude_start;
   @override
-  final double longitudeEnd;
+  final double Longitude_end;
   @override
-  final double latitudeEnd;
+  final double Latitude_end;
   @override
-  final double objLongitude;
+  final double Obj_Longitude;
   @override
-  final double objLatitude;
+  final double Obj_Latitude;
 
   @override
   String toString() {
-    return 'NormalBridgeDto(id: $id, nonBridge: $nonBridge, bridgeId: $bridgeId, bridgeName: $bridgeName, bridgeNameEng: $bridgeNameEng, adm: $adm, section: $section, countyCode: $countyCode, areaCode: $areaCode, route: $route, riverCross: $riverCross, doubleBridge: $doubleBridge, designer: $designer, engineer: $engineer, builder: $builder, inspectRate: $inspectRate, locational: $locational, structure: $structure, totalLength: $totalLength, area: $area, spans: $spans, widthMax: $widthMax, widthMin: $widthMin, driveways: $driveways, longitudeStart: $longitudeStart, latitudeStart: $latitudeStart, longitudeEnd: $longitudeEnd, latitudeEnd: $latitudeEnd, objLongitude: $objLongitude, objLatitude: $objLatitude)';
+    return 'NormalBridgeDto(ID: $ID, non_bridge: $non_bridge, bridge_id: $bridge_id, bridge_name: $bridge_name, bridge_name_eng: $bridge_name_eng, adm: $adm, section: $section, CountyCode: $CountyCode, AreaCode: $AreaCode, route: $route, river_cross: $river_cross, double_bridge: $double_bridge, designer: $designer, engineer: $engineer, builder: $builder, inspect_rate: $inspect_rate, locational: $locational, structure: $structure, total_length: $total_length, area: $area, spans: $spans, width_max: $width_max, width_min: $width_min, driveways: $driveways, Longitude_start: $Longitude_start, Latitude_start: $Latitude_start, Longitude_end: $Longitude_end, Latitude_end: $Latitude_end, Obj_Longitude: $Obj_Longitude, Obj_Latitude: $Obj_Latitude)';
   }
 
   @override
@@ -584,95 +584,95 @@ class _$NormalNormalBridgeDtoImpl extends _NormalNormalBridgeDto {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NormalNormalBridgeDtoImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.nonBridge, nonBridge) ||
-                other.nonBridge == nonBridge) &&
-            (identical(other.bridgeId, bridgeId) ||
-                other.bridgeId == bridgeId) &&
-            (identical(other.bridgeName, bridgeName) ||
-                other.bridgeName == bridgeName) &&
-            (identical(other.bridgeNameEng, bridgeNameEng) ||
-                other.bridgeNameEng == bridgeNameEng) &&
+            (identical(other.ID, ID) || other.ID == ID) &&
+            (identical(other.non_bridge, non_bridge) ||
+                other.non_bridge == non_bridge) &&
+            (identical(other.bridge_id, bridge_id) ||
+                other.bridge_id == bridge_id) &&
+            (identical(other.bridge_name, bridge_name) ||
+                other.bridge_name == bridge_name) &&
+            (identical(other.bridge_name_eng, bridge_name_eng) ||
+                other.bridge_name_eng == bridge_name_eng) &&
             (identical(other.adm, adm) || other.adm == adm) &&
             (identical(other.section, section) || other.section == section) &&
-            (identical(other.countyCode, countyCode) ||
-                other.countyCode == countyCode) &&
-            (identical(other.areaCode, areaCode) ||
-                other.areaCode == areaCode) &&
+            (identical(other.CountyCode, CountyCode) ||
+                other.CountyCode == CountyCode) &&
+            (identical(other.AreaCode, AreaCode) ||
+                other.AreaCode == AreaCode) &&
             (identical(other.route, route) || other.route == route) &&
-            (identical(other.riverCross, riverCross) ||
-                other.riverCross == riverCross) &&
-            (identical(other.doubleBridge, doubleBridge) ||
-                other.doubleBridge == doubleBridge) &&
+            (identical(other.river_cross, river_cross) ||
+                other.river_cross == river_cross) &&
+            (identical(other.double_bridge, double_bridge) ||
+                other.double_bridge == double_bridge) &&
             (identical(other.designer, designer) ||
                 other.designer == designer) &&
             (identical(other.engineer, engineer) ||
                 other.engineer == engineer) &&
             (identical(other.builder, builder) || other.builder == builder) &&
-            (identical(other.inspectRate, inspectRate) ||
-                other.inspectRate == inspectRate) &&
+            (identical(other.inspect_rate, inspect_rate) ||
+                other.inspect_rate == inspect_rate) &&
             (identical(other.locational, locational) ||
                 other.locational == locational) &&
             (identical(other.structure, structure) ||
                 other.structure == structure) &&
-            (identical(other.totalLength, totalLength) ||
-                other.totalLength == totalLength) &&
+            (identical(other.total_length, total_length) ||
+                other.total_length == total_length) &&
             (identical(other.area, area) || other.area == area) &&
             (identical(other.spans, spans) || other.spans == spans) &&
-            (identical(other.widthMax, widthMax) ||
-                other.widthMax == widthMax) &&
-            (identical(other.widthMin, widthMin) ||
-                other.widthMin == widthMin) &&
+            (identical(other.width_max, width_max) ||
+                other.width_max == width_max) &&
+            (identical(other.width_min, width_min) ||
+                other.width_min == width_min) &&
             (identical(other.driveways, driveways) ||
                 other.driveways == driveways) &&
-            (identical(other.longitudeStart, longitudeStart) ||
-                other.longitudeStart == longitudeStart) &&
-            (identical(other.latitudeStart, latitudeStart) ||
-                other.latitudeStart == latitudeStart) &&
-            (identical(other.longitudeEnd, longitudeEnd) ||
-                other.longitudeEnd == longitudeEnd) &&
-            (identical(other.latitudeEnd, latitudeEnd) ||
-                other.latitudeEnd == latitudeEnd) &&
-            (identical(other.objLongitude, objLongitude) ||
-                other.objLongitude == objLongitude) &&
-            (identical(other.objLatitude, objLatitude) ||
-                other.objLatitude == objLatitude));
+            (identical(other.Longitude_start, Longitude_start) ||
+                other.Longitude_start == Longitude_start) &&
+            (identical(other.Latitude_start, Latitude_start) ||
+                other.Latitude_start == Latitude_start) &&
+            (identical(other.Longitude_end, Longitude_end) ||
+                other.Longitude_end == Longitude_end) &&
+            (identical(other.Latitude_end, Latitude_end) ||
+                other.Latitude_end == Latitude_end) &&
+            (identical(other.Obj_Longitude, Obj_Longitude) ||
+                other.Obj_Longitude == Obj_Longitude) &&
+            (identical(other.Obj_Latitude, Obj_Latitude) ||
+                other.Obj_Latitude == Obj_Latitude));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        id,
-        nonBridge,
-        bridgeId,
-        bridgeName,
-        bridgeNameEng,
+        ID,
+        non_bridge,
+        bridge_id,
+        bridge_name,
+        bridge_name_eng,
         adm,
         section,
-        countyCode,
-        areaCode,
+        CountyCode,
+        AreaCode,
         route,
-        riverCross,
-        doubleBridge,
+        river_cross,
+        double_bridge,
         designer,
         engineer,
         builder,
-        inspectRate,
+        inspect_rate,
         locational,
         structure,
-        totalLength,
+        total_length,
         area,
         spans,
-        widthMax,
-        widthMin,
+        width_max,
+        width_min,
         driveways,
-        longitudeStart,
-        latitudeStart,
-        longitudeEnd,
-        latitudeEnd,
-        objLongitude,
-        objLatitude
+        Longitude_start,
+        Latitude_start,
+        Longitude_end,
+        Latitude_end,
+        Obj_Longitude,
+        Obj_Latitude
       ]);
 
   @JsonKey(ignore: true)
@@ -692,65 +692,65 @@ class _$NormalNormalBridgeDtoImpl extends _NormalNormalBridgeDto {
 
 abstract class _NormalNormalBridgeDto extends NormalBridgeDto {
   const factory _NormalNormalBridgeDto(
-      {required final int id,
-      required final String nonBridge,
-      final String? bridgeId,
-      required final String bridgeName,
-      required final String bridgeNameEng,
+      {required final int ID,
+      required final String non_bridge,
+      final String? bridge_id,
+      required final String bridge_name,
+      required final String bridge_name_eng,
       required final String adm,
       required final String section,
-      required final int countyCode,
-      required final int areaCode,
+      required final int CountyCode,
+      required final int AreaCode,
       required final String route,
-      required final String riverCross,
-      required final String doubleBridge,
+      required final String river_cross,
+      required final String double_bridge,
       required final String designer,
       required final String engineer,
       required final String builder,
-      required final int inspectRate,
+      required final int inspect_rate,
       required final String locational,
       required final String structure,
-      required final double totalLength,
+      required final double total_length,
       required final double area,
       required final int spans,
-      required final double widthMax,
-      required final double widthMin,
+      required final double width_max,
+      required final double width_min,
       required final int driveways,
-      required final double longitudeStart,
-      required final double latitudeStart,
-      required final double longitudeEnd,
-      required final double latitudeEnd,
-      required final double objLongitude,
-      required final double objLatitude}) = _$NormalNormalBridgeDtoImpl;
+      required final double Longitude_start,
+      required final double Latitude_start,
+      required final double Longitude_end,
+      required final double Latitude_end,
+      required final double Obj_Longitude,
+      required final double Obj_Latitude}) = _$NormalNormalBridgeDtoImpl;
   const _NormalNormalBridgeDto._() : super._();
 
   factory _NormalNormalBridgeDto.fromJson(Map<String, dynamic> json) =
       _$NormalNormalBridgeDtoImpl.fromJson;
 
   @override
-  int get id;
+  int get ID;
   @override
-  String get nonBridge;
+  String get non_bridge;
   @override
-  String? get bridgeId;
+  String? get bridge_id;
   @override
-  String get bridgeName;
+  String get bridge_name;
   @override
-  String get bridgeNameEng;
+  String get bridge_name_eng;
   @override
   String get adm;
   @override
   String get section;
   @override
-  int get countyCode;
+  int get CountyCode;
   @override
-  int get areaCode;
+  int get AreaCode;
   @override
   String get route;
   @override
-  String get riverCross;
+  String get river_cross;
   @override
-  String get doubleBridge;
+  String get double_bridge;
   @override
   String get designer;
   @override
@@ -758,35 +758,35 @@ abstract class _NormalNormalBridgeDto extends NormalBridgeDto {
   @override
   String get builder;
   @override
-  int get inspectRate;
+  int get inspect_rate;
   @override
   String get locational;
   @override
   String get structure;
   @override
-  double get totalLength;
+  double get total_length;
   @override
   double get area;
   @override
   int get spans;
   @override
-  double get widthMax;
+  double get width_max;
   @override
-  double get widthMin;
+  double get width_min;
   @override
   int get driveways;
   @override
-  double get longitudeStart;
+  double get Longitude_start;
   @override
-  double get latitudeStart;
+  double get Latitude_start;
   @override
-  double get longitudeEnd;
+  double get Longitude_end;
   @override
-  double get latitudeEnd;
+  double get Latitude_end;
   @override
-  double get objLongitude;
+  double get Obj_Longitude;
   @override
-  double get objLatitude;
+  double get Obj_Latitude;
   @override
   @JsonKey(ignore: true)
   _$$NormalNormalBridgeDtoImplCopyWith<_$NormalNormalBridgeDtoImpl>

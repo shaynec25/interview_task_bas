@@ -10,9 +10,27 @@ class App extends StatelessWidget {
   final appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerDelegate: appRouter.delegate(),
-      routeInformationParser: appRouter.defaultRouteParser(),
+    return MultiRepositoryProvider(
+      providers: [
+        RepositoryProvider(
+          create: (_) => const BridgeRepository(
+            BridgeRemoteDataSource(),
+          ),
+        )
+      ],
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => BridgeBloc(
+              context.read<BridgeRepository>(),
+            ),
+          ),
+        ],
+        child: MaterialApp.router(
+          routerDelegate: appRouter.delegate(),
+          routeInformationParser: appRouter.defaultRouteParser(),
+        ),
+      ),
     );
   }
 }
