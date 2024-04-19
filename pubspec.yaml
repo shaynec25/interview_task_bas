@@ -1,5 +1,5 @@
 name: buy_and_ship_task
-description: "A new Flutter project."
+description: "A Flutter task for Buyandship."
 publish_to: 'none'
 version: 0.1.0
 
@@ -9,11 +9,26 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^1.1.2
+  # NOTE: State Management
+  bloc: ^8.1.0
+  bloc_concurrency: ^0.2.1
+  flutter_bloc: ^8.1.1
+  hydrated_bloc: ^9.1.0
+  # NOTE: Router
+  auto_route: ^7.8.4
+  # NOTE: Speed up development process
+  freezed_annotation: ^2.2.0
+  json_serializable: ^6.5.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  # NOTE: Speed up
+  build_runner: 
+  freezed: ^2.3.2
+  flutter_gen_runner: ^5.3.1
 
 flutter:
   uses-material-design: true
