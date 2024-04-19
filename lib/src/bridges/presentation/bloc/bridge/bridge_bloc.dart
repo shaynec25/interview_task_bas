@@ -6,6 +6,7 @@ import 'package:buy_and_ship_task/core/errors/failure.dart';
 import 'package:buy_and_ship_task/core/errors/load_status.dart';
 import 'package:buy_and_ship_task/src/bridges/data/repos/bridge_repository.dart';
 import 'package:buy_and_ship_task/src/bridges/domain/entities/bridge.dart';
+import 'package:collection/collection.dart';
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -34,11 +35,15 @@ class BridgeBloc extends Bloc<BridgeEvent, BridgeState> {
               loadStatus: const LoadStatus.failed(),
             ),
           ),
-          (result) => emit(
-            state.copyWith(
-              bridges: result,
-            ),
-          ),
+          (result) {
+            final groupedItems =
+                result.groupListsBy((element) => element.areaCode);
+            emit(
+              state.copyWith(
+                bridges: groupedItems,
+              ),
+            );
+          },
         );
       },
     );

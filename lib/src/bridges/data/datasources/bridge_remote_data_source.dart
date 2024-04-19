@@ -7,21 +7,40 @@ import 'package:buy_and_ship_task/gen/assets.gen.dart';
 import 'package:flutter/services.dart';
 
 abstract class IBridgeRemoteDataSource {
-  Future<List<DataMap>> fetchBridges();
+  Future<List<DataMap>> fetchNormalBridges();
+  Future<List<DataMap>> fetchFootBridges();
 }
 
 class BridgeRemoteDataSource implements IBridgeRemoteDataSource {
   const BridgeRemoteDataSource();
 
   @override
-  Future<List<DataMap>> fetchBridges() async {
+  Future<List<DataMap>> fetchNormalBridges() async {
     try {
-      final String response = await rootBundle.loadString(Assets.data.bridges);
-      List<DataMap> dataList =
-          json.decode(response).cast<Map<String, dynamic>>();
-      return dataList;
+      final String normalBridgeJson =
+          await rootBundle.loadString(Assets.data.bridges);
+      List<DataMap> normalBridges =
+          json.decode(normalBridgeJson).cast<Map<String, dynamic>>();
+
+      return normalBridges;
     } catch (e) {
-      throw const APIFailure(message: 'Loading data failed', errorCode: 4);
+      throw const APIFailure(
+          message: 'Loading NormalBridges failed', errorCode: 3);
+    }
+  }
+
+  @override
+  Future<List<DataMap>> fetchFootBridges() async {
+    try {
+      final String footBridgeJson =
+          await rootBundle.loadString(Assets.data.footbridges);
+      List<DataMap> footBridges =
+          json.decode(footBridgeJson).cast<Map<String, dynamic>>();
+
+      return footBridges;
+    } catch (e) {
+      throw const APIFailure(
+          message: 'Loading FootBridges failed', errorCode: 4);
     }
   }
 }

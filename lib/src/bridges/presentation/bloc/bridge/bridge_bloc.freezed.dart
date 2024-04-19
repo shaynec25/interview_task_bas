@@ -166,7 +166,7 @@ abstract class _FetchBridges implements BridgeEvent {
 
 /// @nodoc
 mixin _$BridgeState {
-  List<Bridge> get bridges => throw _privateConstructorUsedError;
+  Map<int, List<Bridge>> get bridges => throw _privateConstructorUsedError;
   Option<Failure> get failureOption => throw _privateConstructorUsedError;
   LoadStatus get loadStatus => throw _privateConstructorUsedError;
 
@@ -182,7 +182,7 @@ abstract class $BridgeStateCopyWith<$Res> {
       _$BridgeStateCopyWithImpl<$Res, BridgeState>;
   @useResult
   $Res call(
-      {List<Bridge> bridges,
+      {Map<int, List<Bridge>> bridges,
       Option<Failure> failureOption,
       LoadStatus loadStatus});
 
@@ -210,7 +210,7 @@ class _$BridgeStateCopyWithImpl<$Res, $Val extends BridgeState>
       bridges: null == bridges
           ? _value.bridges
           : bridges // ignore: cast_nullable_to_non_nullable
-              as List<Bridge>,
+              as Map<int, List<Bridge>>,
       failureOption: null == failureOption
           ? _value.failureOption
           : failureOption // ignore: cast_nullable_to_non_nullable
@@ -240,7 +240,7 @@ abstract class _$$BridgeStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<Bridge> bridges,
+      {Map<int, List<Bridge>> bridges,
       Option<Failure> failureOption,
       LoadStatus loadStatus});
 
@@ -267,7 +267,7 @@ class __$$BridgeStateImplCopyWithImpl<$Res>
       bridges: null == bridges
           ? _value._bridges
           : bridges // ignore: cast_nullable_to_non_nullable
-              as List<Bridge>,
+              as Map<int, List<Bridge>>,
       failureOption: null == failureOption
           ? _value.failureOption
           : failureOption // ignore: cast_nullable_to_non_nullable
@@ -284,18 +284,18 @@ class __$$BridgeStateImplCopyWithImpl<$Res>
 
 class _$BridgeStateImpl extends _BridgeState {
   const _$BridgeStateImpl(
-      {required final List<Bridge> bridges,
+      {required final Map<int, List<Bridge>> bridges,
       required this.failureOption,
       required this.loadStatus})
       : _bridges = bridges,
         super._();
 
-  final List<Bridge> _bridges;
+  final Map<int, List<Bridge>> _bridges;
   @override
-  List<Bridge> get bridges {
-    if (_bridges is EqualUnmodifiableListView) return _bridges;
+  Map<int, List<Bridge>> get bridges {
+    if (_bridges is EqualUnmodifiableMapView) return _bridges;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_bridges);
+    return EqualUnmodifiableMapView(_bridges);
   }
 
   @override
@@ -333,13 +333,13 @@ class _$BridgeStateImpl extends _BridgeState {
 
 abstract class _BridgeState extends BridgeState {
   const factory _BridgeState(
-      {required final List<Bridge> bridges,
+      {required final Map<int, List<Bridge>> bridges,
       required final Option<Failure> failureOption,
       required final LoadStatus loadStatus}) = _$BridgeStateImpl;
   const _BridgeState._() : super._();
 
   @override
-  List<Bridge> get bridges;
+  Map<int, List<Bridge>> get bridges;
   @override
   Option<Failure> get failureOption;
   @override

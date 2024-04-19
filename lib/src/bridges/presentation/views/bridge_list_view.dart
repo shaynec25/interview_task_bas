@@ -1,21 +1,26 @@
 import 'package:buy_and_ship_task/src/bridges/domain/entities/bridge.dart';
+import 'package:buy_and_ship_task/src/bridges/presentation/widgets/bridge_list_tile.dart';
 import 'package:flutter/material.dart';
 
 class BridgeListView extends StatelessWidget {
   const BridgeListView({
     super.key,
-    required this.bridges,
+    required this.groupedBridges,
   });
-  final List<Bridge> bridges;
+  final Map<int, List<Bridge>> groupedBridges;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: bridges.length,
+      itemCount: groupedBridges.length,
       itemBuilder: (context, index) {
-        final Bridge bridge = bridges[index];
-        return ListTile(
-          title: Text(bridge.name),
+        int areaCode = groupedBridges.keys.elementAt(index);
+        final List<Bridge> bridges = groupedBridges[areaCode]!;
+        return ExpansionTile(
+          title: Text(
+            'AreaCode: $areaCode',
+          ),
+          children: bridges.map((e) => BridgeListTile(bridge: e)).toList(),
         );
       },
     );

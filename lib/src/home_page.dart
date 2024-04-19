@@ -18,9 +18,11 @@ class HomePage extends StatelessWidget {
         },
         builder: (context, state) {
           return state.bridges.isEmpty
-              ? const CircularProgressIndicator()
+              ? const Center(
+                  child: CircularProgressIndicator(),
+                )
               : BridgeListView(
-                  bridges: state.bridges,
+                  groupedBridges: state.bridges,
                 );
         },
       ),

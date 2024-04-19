@@ -14,6 +14,8 @@ class BridgeListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        title: Text(bridge.name),
+        tileColor: bridge.normalBridge != null ? Colors.amber : Colors.green,
         onTap: onTap,
       ),
     );
