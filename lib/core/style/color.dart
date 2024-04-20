@@ -1,6 +1,8 @@
 part of 'style.dart';
 
 class ColorSystem {
+  static const grey100 = Color(0xffDDDDDD);
+
   static const primaryLighter = Color(0xffFFEFEF);
   static const primaryLight = Color(0xffFFB99A);
   static const primaryMain = Color(0xffFF7257);

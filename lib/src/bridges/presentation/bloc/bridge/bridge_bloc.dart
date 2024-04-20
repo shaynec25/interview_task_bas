@@ -20,7 +20,11 @@ class BridgeBloc extends Bloc<BridgeEvent, BridgeState> {
   BridgeBloc(
     this._bridgeRepository,
   ) : super(BridgeState.initial()) {
-    on<BridgeEvent>(_onEvent, transformer: restartable());
+    on<BridgeEvent>(
+      _onEvent,
+      transformer:
+          restartable(), // to avoid data present incorrectly due to response delay
+    );
   }
 
   FutureOr<void> _onEvent(
