@@ -19,32 +19,38 @@ mixin _$BridgeEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchBridges,
+    required TResult Function(BridgeTypes selectedFilter) setFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchBridges,
+    TResult? Function(BridgeTypes selectedFilter)? setFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchBridges,
+    TResult Function(BridgeTypes selectedFilter)? setFilter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchBridges value) fetchBridges,
+    required TResult Function(_SetFilter value) setFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchBridges value)? fetchBridges,
+    TResult? Function(_SetFilter value)? setFilter,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchBridges value)? fetchBridges,
+    TResult Function(_SetFilter value)? setFilter,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -107,6 +113,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() fetchBridges,
+    required TResult Function(BridgeTypes selectedFilter) setFilter,
   }) {
     return fetchBridges();
   }
@@ -115,6 +122,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? fetchBridges,
+    TResult? Function(BridgeTypes selectedFilter)? setFilter,
   }) {
     return fetchBridges?.call();
   }
@@ -123,6 +131,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? fetchBridges,
+    TResult Function(BridgeTypes selectedFilter)? setFilter,
     required TResult orElse(),
   }) {
     if (fetchBridges != null) {
@@ -135,6 +144,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_FetchBridges value) fetchBridges,
+    required TResult Function(_SetFilter value) setFilter,
   }) {
     return fetchBridges(this);
   }
@@ -143,6 +153,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_FetchBridges value)? fetchBridges,
+    TResult? Function(_SetFilter value)? setFilter,
   }) {
     return fetchBridges?.call(this);
   }
@@ -151,6 +162,7 @@ class _$FetchBridgesImpl implements _FetchBridges {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_FetchBridges value)? fetchBridges,
+    TResult Function(_SetFilter value)? setFilter,
     required TResult orElse(),
   }) {
     if (fetchBridges != null) {
@@ -165,8 +177,144 @@ abstract class _FetchBridges implements BridgeEvent {
 }
 
 /// @nodoc
+abstract class _$$SetFilterImplCopyWith<$Res> {
+  factory _$$SetFilterImplCopyWith(
+          _$SetFilterImpl value, $Res Function(_$SetFilterImpl) then) =
+      __$$SetFilterImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({BridgeTypes selectedFilter});
+}
+
+/// @nodoc
+class __$$SetFilterImplCopyWithImpl<$Res>
+    extends _$BridgeEventCopyWithImpl<$Res, _$SetFilterImpl>
+    implements _$$SetFilterImplCopyWith<$Res> {
+  __$$SetFilterImplCopyWithImpl(
+      _$SetFilterImpl _value, $Res Function(_$SetFilterImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? selectedFilter = null,
+  }) {
+    return _then(_$SetFilterImpl(
+      selectedFilter: null == selectedFilter
+          ? _value.selectedFilter
+          : selectedFilter // ignore: cast_nullable_to_non_nullable
+              as BridgeTypes,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SetFilterImpl implements _SetFilter {
+  const _$SetFilterImpl({required this.selectedFilter});
+
+  @override
+  final BridgeTypes selectedFilter;
+
+  @override
+  String toString() {
+    return 'BridgeEvent.setFilter(selectedFilter: $selectedFilter)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SetFilterImpl &&
+            (identical(other.selectedFilter, selectedFilter) ||
+                other.selectedFilter == selectedFilter));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, selectedFilter);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SetFilterImplCopyWith<_$SetFilterImpl> get copyWith =>
+      __$$SetFilterImplCopyWithImpl<_$SetFilterImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() fetchBridges,
+    required TResult Function(BridgeTypes selectedFilter) setFilter,
+  }) {
+    return setFilter(selectedFilter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? fetchBridges,
+    TResult? Function(BridgeTypes selectedFilter)? setFilter,
+  }) {
+    return setFilter?.call(selectedFilter);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? fetchBridges,
+    TResult Function(BridgeTypes selectedFilter)? setFilter,
+    required TResult orElse(),
+  }) {
+    if (setFilter != null) {
+      return setFilter(selectedFilter);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FetchBridges value) fetchBridges,
+    required TResult Function(_SetFilter value) setFilter,
+  }) {
+    return setFilter(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_FetchBridges value)? fetchBridges,
+    TResult? Function(_SetFilter value)? setFilter,
+  }) {
+    return setFilter?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FetchBridges value)? fetchBridges,
+    TResult Function(_SetFilter value)? setFilter,
+    required TResult orElse(),
+  }) {
+    if (setFilter != null) {
+      return setFilter(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SetFilter implements BridgeEvent {
+  const factory _SetFilter({required final BridgeTypes selectedFilter}) =
+      _$SetFilterImpl;
+
+  BridgeTypes get selectedFilter;
+  @JsonKey(ignore: true)
+  _$$SetFilterImplCopyWith<_$SetFilterImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$BridgeState {
   Map<int, List<Bridge>> get bridges => throw _privateConstructorUsedError;
+  BridgeTypes get filterType => throw _privateConstructorUsedError;
   Option<Failure> get failureOption => throw _privateConstructorUsedError;
   LoadStatus get loadStatus => throw _privateConstructorUsedError;
 
@@ -183,6 +331,7 @@ abstract class $BridgeStateCopyWith<$Res> {
   @useResult
   $Res call(
       {Map<int, List<Bridge>> bridges,
+      BridgeTypes filterType,
       Option<Failure> failureOption,
       LoadStatus loadStatus});
 
@@ -203,6 +352,7 @@ class _$BridgeStateCopyWithImpl<$Res, $Val extends BridgeState>
   @override
   $Res call({
     Object? bridges = null,
+    Object? filterType = null,
     Object? failureOption = null,
     Object? loadStatus = null,
   }) {
@@ -211,6 +361,10 @@ class _$BridgeStateCopyWithImpl<$Res, $Val extends BridgeState>
           ? _value.bridges
           : bridges // ignore: cast_nullable_to_non_nullable
               as Map<int, List<Bridge>>,
+      filterType: null == filterType
+          ? _value.filterType
+          : filterType // ignore: cast_nullable_to_non_nullable
+              as BridgeTypes,
       failureOption: null == failureOption
           ? _value.failureOption
           : failureOption // ignore: cast_nullable_to_non_nullable
@@ -241,6 +395,7 @@ abstract class _$$BridgeStateImplCopyWith<$Res>
   @useResult
   $Res call(
       {Map<int, List<Bridge>> bridges,
+      BridgeTypes filterType,
       Option<Failure> failureOption,
       LoadStatus loadStatus});
 
@@ -260,6 +415,7 @@ class __$$BridgeStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? bridges = null,
+    Object? filterType = null,
     Object? failureOption = null,
     Object? loadStatus = null,
   }) {
@@ -268,6 +424,10 @@ class __$$BridgeStateImplCopyWithImpl<$Res>
           ? _value._bridges
           : bridges // ignore: cast_nullable_to_non_nullable
               as Map<int, List<Bridge>>,
+      filterType: null == filterType
+          ? _value.filterType
+          : filterType // ignore: cast_nullable_to_non_nullable
+              as BridgeTypes,
       failureOption: null == failureOption
           ? _value.failureOption
           : failureOption // ignore: cast_nullable_to_non_nullable
@@ -285,6 +445,7 @@ class __$$BridgeStateImplCopyWithImpl<$Res>
 class _$BridgeStateImpl extends _BridgeState {
   const _$BridgeStateImpl(
       {required final Map<int, List<Bridge>> bridges,
+      required this.filterType,
       required this.failureOption,
       required this.loadStatus})
       : _bridges = bridges,
@@ -299,13 +460,15 @@ class _$BridgeStateImpl extends _BridgeState {
   }
 
   @override
+  final BridgeTypes filterType;
+  @override
   final Option<Failure> failureOption;
   @override
   final LoadStatus loadStatus;
 
   @override
   String toString() {
-    return 'BridgeState(bridges: $bridges, failureOption: $failureOption, loadStatus: $loadStatus)';
+    return 'BridgeState(bridges: $bridges, filterType: $filterType, failureOption: $failureOption, loadStatus: $loadStatus)';
   }
 
   @override
@@ -314,6 +477,8 @@ class _$BridgeStateImpl extends _BridgeState {
         (other.runtimeType == runtimeType &&
             other is _$BridgeStateImpl &&
             const DeepCollectionEquality().equals(other._bridges, _bridges) &&
+            (identical(other.filterType, filterType) ||
+                other.filterType == filterType) &&
             (identical(other.failureOption, failureOption) ||
                 other.failureOption == failureOption) &&
             (identical(other.loadStatus, loadStatus) ||
@@ -321,8 +486,12 @@ class _$BridgeStateImpl extends _BridgeState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_bridges), failureOption, loadStatus);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_bridges),
+      filterType,
+      failureOption,
+      loadStatus);
 
   @JsonKey(ignore: true)
   @override
@@ -334,12 +503,15 @@ class _$BridgeStateImpl extends _BridgeState {
 abstract class _BridgeState extends BridgeState {
   const factory _BridgeState(
       {required final Map<int, List<Bridge>> bridges,
+      required final BridgeTypes filterType,
       required final Option<Failure> failureOption,
       required final LoadStatus loadStatus}) = _$BridgeStateImpl;
   const _BridgeState._() : super._();
 
   @override
   Map<int, List<Bridge>> get bridges;
+  @override
+  BridgeTypes get filterType;
   @override
   Option<Failure> get failureOption;
   @override

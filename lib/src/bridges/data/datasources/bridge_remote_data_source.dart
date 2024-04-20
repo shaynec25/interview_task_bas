@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:buy_and_ship_task/core/errors/failure.dart';
 import 'package:buy_and_ship_task/core/utils/typedef.dart';
 import 'package:buy_and_ship_task/gen/assets.gen.dart';
+import 'package:buy_and_ship_task/src/constants.dart';
 import 'package:flutter/services.dart';
 
 abstract class IBridgeRemoteDataSource {
@@ -32,6 +33,8 @@ class BridgeRemoteDataSource implements IBridgeRemoteDataSource {
   @override
   Future<List<DataMap>> fetchFootBridges() async {
     try {
+      // mock waiting time for api call
+      await Future.delayed(mockAPIResponseDuration);
       final String footBridgeJson =
           await rootBundle.loadString(Assets.data.footbridges);
       List<DataMap> footBridges =

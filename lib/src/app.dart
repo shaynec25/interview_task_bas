@@ -1,3 +1,4 @@
+import 'package:buy_and_ship_task/core/style/style.dart';
 import 'package:buy_and_ship_task/router/app_router.dart';
 import 'package:buy_and_ship_task/src/bridges/data/datasources/bridge_remote_data_source.dart';
 import 'package:buy_and_ship_task/src/bridges/data/repos/bridge_repository.dart';
@@ -23,10 +24,13 @@ class App extends StatelessWidget {
           BlocProvider(
             create: (context) => BridgeBloc(
               context.read<BridgeRepository>(),
-            ),
+            )..add(
+                const BridgeEvent.fetchBridges(),
+              ),
           ),
         ],
         child: MaterialApp.router(
+          theme: themeData,
           routerDelegate: appRouter.delegate(),
           routeInformationParser: appRouter.defaultRouteParser(),
         ),

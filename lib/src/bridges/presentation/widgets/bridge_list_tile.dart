@@ -1,3 +1,6 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:buy_and_ship_task/core/style/style.dart';
+import 'package:buy_and_ship_task/router/app_router.gr.dart';
 import 'package:buy_and_ship_task/src/bridges/domain/entities/bridge.dart';
 import 'package:flutter/material.dart';
 
@@ -5,18 +8,29 @@ class BridgeListTile extends StatelessWidget {
   const BridgeListTile({
     super.key,
     required this.bridge,
-    this.onTap,
   });
   final Bridge bridge;
-  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: ColorSystem.primaryLighter,
+      elevation: 0.0,
       child: ListTile(
+        isThreeLine: true,
         title: Text(bridge.name),
-        tileColor: bridge.normalBridge != null ? Colors.amber : Colors.green,
-        onTap: onTap,
+        subtitle: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('管理機關: ${bridge.adm}'),
+            Text('Route: ${bridge.route}'),
+          ],
+        ),
+        trailing: const SizedBox(
+          height: double.infinity,
+          child: Icon(Icons.info_rounded),
+        ),
+        onTap: () => context.router.push(const BridgeDetailRoute()),
       ),
     );
   }

@@ -5,6 +5,7 @@ import 'package:buy_and_ship_task/src/bridges/data/datasources/bridge_remote_dat
 import 'package:buy_and_ship_task/src/bridges/data/dtos/foot_bridge_dtos.dart';
 import 'package:buy_and_ship_task/src/bridges/data/dtos/normal_bridge_dtos.dart';
 import 'package:buy_and_ship_task/src/bridges/domain/entities/bridge.dart';
+import 'package:buy_and_ship_task/src/bridges/domain/enums/bridge_types.dart';
 import 'package:buy_and_ship_task/src/bridges/domain/repos/i_bridge_repository.dart';
 import 'package:dartz/dartz.dart';
 
@@ -14,10 +15,25 @@ class BridgeRepository implements IBridgeRepository {
   final IBridgeRemoteDataSource _remoteDataSource;
 
   @override
-  ResultFuture<List<Bridge>> fetchBridges() async {
+  ResultFuture<List<Bridge>> fetchBridges({
+    required BridgeTypes selectedFilter,
+  }) async {
     try {
-      final normalBridgeData = await _remoteDataSource.fetchNormalBridges();
-      final footBridgeData = await _remoteDataSource.fetchFootBridges();
+      List<Map<String, dynamic>> normalBridgeData = [];
+      List<Map<String, dynamic>> footBridgeData = [];
+      switch (selectedFilter) {
+        case BridgeTypes.normalBridge:
+          normalBridgeData = await _remoteDataSource.fetchNormalBridges();
+          break;
+        case BridgeTypes.footBridge:
+          footBridgeData = await _remoteDataSource.fetchFootBridges();
+        case BridgeTypes.allBridge:
+          normalBridgeData = await _remoteDataSource.fetchNormalBridges();
+          footBridgeData = await _remoteDataSource.fetchFootBridges();
+          break;
+      }
+      // normalBridgeData = await _remoteDataSource.fetchNormalBridges();
+      // footBridgeData = await _remoteDataSource.fetchFootBridges();
 
       final List<Bridge> normalBridges = normalBridgeData
           .map((e) => NormalBridgeDto.fromJson(e).toDomain())
