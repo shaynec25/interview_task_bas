@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:buy_and_ship_task/core/style/style.dart';
 import 'package:buy_and_ship_task/src/bridges/domain/entities/bridge.dart';
-import 'package:buy_and_ship_task/src/shared_widgets/scaffold_body_layout.dart';
+import 'package:buy_and_ship_task/src/shared_widgets/custom_scaffold_layout.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -79,17 +79,13 @@ class BridgeDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(bridge.name),
-      ),
-      body: ScaffoldBodyLayout(
-        child: Column(
-          children: [
-            ...bridgeInfoTable(context),
-            mapView(context),
-          ],
-        ),
+    return CustomScaffoldLayout(
+      appBarTitle: bridge.name,
+      child: Column(
+        children: [
+          ...bridgeInfoTable(context),
+          mapView(context),
+        ],
       ),
     );
   }
