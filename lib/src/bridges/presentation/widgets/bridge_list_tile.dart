@@ -30,7 +30,9 @@ class BridgeListTile extends StatelessWidget {
           height: double.infinity,
           child: Icon(Icons.info_rounded),
         ),
-        onTap: () => context.router.push(const BridgeDetailRoute()),
+        onTap: () => context.router.push(
+          BridgeDetailRoute(bridge: bridge),
+        ),
       ),
     );
   }
