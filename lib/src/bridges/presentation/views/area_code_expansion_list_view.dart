@@ -12,6 +12,7 @@ class AreaCodeExpansionListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
       itemCount: groupedBridges.length,
       itemBuilder: (context, index) {
         int areaCode = groupedBridges.keys.elementAt(index);
@@ -22,7 +23,9 @@ class AreaCodeExpansionListView extends StatelessWidget {
               '區域代碼: $areaCode',
             ),
             subtitle: Text('橋梁總計: ${bridgesOfArea.length} 座'),
-            children: [BridgeListView(bridgesOfArea: bridgesOfArea)],
+            children: [
+              BridgeListView(bridgesOfArea: bridgesOfArea),
+            ],
           ),
         );
       },
