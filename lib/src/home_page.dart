@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
           return Column(
             children: [
               const BridgeTypeFilter(),
-              // 資料讀取中，顯示loading indicator，否則使用SizedBox填充4.0高度(LinearProgressIndicator的default height)，以避免UI跳動
+              // NOTE: 資料讀取中，顯示loading indicator，否則使用SizedBox填充4.0高度(LinearProgressIndicator的default height)，以避免UI跳動
               if (state.loadStatus == const LoadStatus.inProgress())
                 const LinearProgressIndicator()
               else

@@ -7,6 +7,7 @@ class AreaCodeExpansionListView extends StatelessWidget {
     super.key,
     required this.groupedBridges,
   });
+
   final Map<int, List<Bridge>> groupedBridges;
 
   @override
@@ -16,12 +17,12 @@ class AreaCodeExpansionListView extends StatelessWidget {
       itemCount: groupedBridges.length,
       itemBuilder: (context, index) {
         int areaCode = groupedBridges.keys.elementAt(index);
+
         final List<Bridge> bridgesOfArea = groupedBridges[areaCode]!;
+
         return Card(
           child: ExpansionTile(
-            title: Text(
-              '區域代碼: $areaCode',
-            ),
+            title: Text('區域代碼: $areaCode'),
             subtitle: Text('橋梁總計: ${bridgesOfArea.length} 座'),
             children: [
               BridgeListView(bridgesOfArea: bridgesOfArea),

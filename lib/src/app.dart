@@ -8,9 +8,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class App extends StatelessWidget {
   App({super.key});
+
   final appRouter = AppRouter();
+
   @override
   Widget build(BuildContext context) {
+    // NOTE: APP level repos, blocs
     return MultiRepositoryProvider(
       providers: [
         RepositoryProvider(

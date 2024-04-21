@@ -11,6 +11,7 @@ class BridgeDetailPage extends StatelessWidget {
     Key? key,
     required this.bridge,
   }) : super(key: key);
+
   final Bridge bridge;
 
   List<Widget> bridgeInfoTable(BuildContext context) {
