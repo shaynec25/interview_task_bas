@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:buy_and_ship_task/core/errors/failure.dart';
+import 'package:buy_and_ship_task/core/errors/exceptions.dart';
 import 'package:buy_and_ship_task/core/utils/typedef.dart';
 import 'package:buy_and_ship_task/gen/assets.gen.dart';
 import 'package:buy_and_ship_task/src/constants.dart';
@@ -25,7 +25,7 @@ class BridgeRemoteDataSource implements IBridgeRemoteDataSource {
 
       return normalBridges;
     } catch (e) {
-      throw const APIFailure(
+      throw const APIException(
           message: 'Loading NormalBridges failed', errorCode: 3);
     }
   }
@@ -42,7 +42,7 @@ class BridgeRemoteDataSource implements IBridgeRemoteDataSource {
 
       return footBridges;
     } catch (e) {
-      throw const APIFailure(
+      throw const APIException(
           message: 'Loading FootBridges failed', errorCode: 4);
     }
   }

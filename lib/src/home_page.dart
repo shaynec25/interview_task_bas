@@ -15,7 +15,27 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffoldLayout(
       appBarTitle: '台北市橋梁資訊列表',
-      child: BlocBuilder<BridgeBloc, BridgeState>(
+      child: BlocConsumer<BridgeBloc, BridgeState>(
+        listenWhen: (p, c) =>
+            p.loadStatus != c.loadStatus &&
+            c.loadStatus == const LoadStatus.failed(),
+        listener: (context, state) {
+          // NOTE: show dialog when lading failed.
+          if (state.failureOption.isSome()) {
+            showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(
+                  title: const Text('Oops!'),
+                  content: Text(
+                    state.failureOption
+                        .fold(() => 'unknown error.', (a) => a.message),
+                  ),
+                );
+              },
+            );
+          }
+        },
         builder: (context, state) {
           return Column(
             children: [

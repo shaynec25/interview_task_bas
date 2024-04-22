@@ -32,8 +32,6 @@ class BridgeRepository implements IBridgeRepository {
           footBridgeData = await _remoteDataSource.fetchFootBridges();
           break;
       }
-      // normalBridgeData = await _remoteDataSource.fetchNormalBridges();
-      // footBridgeData = await _remoteDataSource.fetchFootBridges();
 
       final List<Bridge> normalBridges = normalBridgeData
           .map((e) => NormalBridgeDto.fromJson(e).toDomain())
@@ -45,9 +43,13 @@ class BridgeRepository implements IBridgeRepository {
 
       return Right(normalBridges + footBridges);
     } on APIException catch (e) {
-      return Left(APIFailure.fromException(e));
-    } catch (e) {
-      return const Left(DecodeFailure(errorCode: 9, message: 'decode failed'));
+      return Left(
+        APIFailure.fromException(e),
+      );
+    } catch (_) {
+      return const Left(
+        DecodeFailure(errorCode: 9, message: 'decode failed'),
+      );
     }
   }
 }

@@ -14,6 +14,7 @@ class AreaCodeExpansionListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const BouncingScrollPhysics(),
+      cacheExtent: MediaQuery.of(context).size.height,
       itemCount: groupedBridges.length,
       itemBuilder: (context, index) {
         int areaCode = groupedBridges.keys.elementAt(index);
