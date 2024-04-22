@@ -11,6 +11,6 @@ Note: Support Android only.
 
 
 
-<img src="https://github.com/shaynec25/interview_task_bas/assets/80501218/0d4d0b37-0210-4013-8181-bad414e39685" width="100">
+<img src="https://github.com/shaynec25/interview_task_bas/assets/80501218/0d4d0b37-0210-4013-8181-bad414e39685" width="300">
 
-![bridge_app_demo](https://github.com/shaynec25/interview_task_bas/assets/80501218/0d4d0b37-0210-4013-8181-bad414e39685)
+
